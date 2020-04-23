@@ -12,7 +12,7 @@ end
 
 # new
 get "/students/new" do
-    erb( :new )
+  erb( :new )
 end
 
 # show
@@ -22,7 +22,7 @@ get "/students/:id" do # show
 end
 
 # create
-post "/student/:id" do
+post "/students" do
   @student = Student.new(params)
   @student.save()
   erb(:create)
