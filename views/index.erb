@@ -3,7 +3,7 @@
         <% @students.each do |student| %>
             <li><%= student.first_name %> <%= student.last_name %></li>
             <li> Age: <%= student.age %></li>
-            <a href="/students/<%= student.id %>"><%= student.id %> Id</a>
+            Id: <a href="/students/<%= student.id %>"><%= student.id %></a>
             <br>
             <br>
         <% end %>
