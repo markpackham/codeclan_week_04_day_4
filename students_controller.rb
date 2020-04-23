@@ -7,15 +7,26 @@ also_reload("./models/*")
 # index
 get "/students" do # index
   @students = Student.all()
-  puts @students
   erb(:index)
 end
 
-# show
-
 # new
+get "/students/new" do
+    erb( :new )
+end
+
+# show
+get "/students/:id" do # show
+  @student = Student.find(params[:id])
+  erb(:show)
+end
 
 # create
+post "/student/:id" do
+  @student = Student.new(params)
+  @student.save()
+  erb(:create)
+end
 
 # edit
 

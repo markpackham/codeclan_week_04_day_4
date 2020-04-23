@@ -1,8 +1,12 @@
 <ul>
     <div class="student-box">
         <% @students.each do |student| %>
-            <li><%= student.first_name %> <%= student.last_name %><</li>
-            <li><%= student.age %></li>
+            <li><%= student.first_name %> <%= student.last_name %></li>
+            <li> Age: <%= student.age %></li>
+            <a href="/students/<%= student.id %>"><%= student.id %> Id</a>
+            <br>
+            <br>
         <% end %>
     </div>
 </ul>
+<a href="/students">Return Home</a>
