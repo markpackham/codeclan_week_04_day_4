@@ -1,0 +1,8 @@
+<ul>
+    <div class="student-box">
+        <% @students.each do |student| %>
+            <li><%= student.first_name %> <%= student.last_name %><</li>
+            <li><%= student.age %></li>
+        <% end %>
+    </div>
+</ul>
